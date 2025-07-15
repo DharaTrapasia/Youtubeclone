@@ -1,4 +1,18 @@
+  const toggleBtn = document.querySelector('.toggle-btn');
+  const sidebar = document.querySelector('.side-bar');
+  const overlay = document.querySelector('.overlay');
 
+  toggleBtn.addEventListener('click', () => {
+    sidebar.classList.toggle('active');
+    overlay.classList.toggle('active');
+  });
+
+  overlay.addEventListener('click', () => {
+    sidebar.classList.remove('active');
+    overlay.classList.remove('active');
+  });
+ 
+  /* video container to display videos */
 const videoCardContainer = document.querySelector('.video-container');
 
 let api_key = "Api_key";
@@ -49,7 +63,7 @@ const makeVideoCard = (data) => {
     `;
 }
 
-// search bar
+/* search bar */
 
 const searchInput = document.querySelector('.search-bar');
 const searchBtn = document.querySelector('.search-btn');
